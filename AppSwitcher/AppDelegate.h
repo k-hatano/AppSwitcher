@@ -8,8 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    IBOutlet NSArrayController *arrayController;
+    IBOutlet NSTableView *table;
+    IBOutlet NSWindow *window;
+}
 
+- (void)updateApplicationsList;
+
+- (void)heartbeat:(NSThread*)thread;
+- (IBAction)switchApplication:(id)sender;
 
 @end
 
